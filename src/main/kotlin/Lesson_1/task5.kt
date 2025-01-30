@@ -1,17 +1,24 @@
 package org.example.Lesson_1
 
 fun main() {
-    var seconds = 6480
-    var minutes = 6480 / 60
-    seconds %= 60
-    val hours = minutes / 60
-    minutes %= 60
-    print(0)
-    print(hours)
-    print(":")
-    print(minutes)
-    print(":")
-    print(0)
-    print(seconds)
+    val secondsTotal = 6480
+    val secondsInMinute = 60
+
+    val minutesForCalculate = secondsTotal / secondsInMinute
+
+    val secondsInSpace = secondsTotal % secondsInMinute
+    val hoursInSpace = minutesForCalculate / secondsInMinute
+    val minutesInSpace = minutesForCalculate % secondsInMinute
+
+    print(checkZeroBefore(hoursInSpace) + ":" + checkZeroBefore(minutesInSpace) + ":" + checkZeroBefore(secondsInSpace))
 
 }
+
+fun checkZeroBefore(time: Int): String {
+    if (time < 10) {
+        return "0$time"
+    } else {
+        return time.toString()
+    }
+}
+
