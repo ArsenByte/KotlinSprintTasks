@@ -10,15 +10,8 @@ fun main() {
     val hoursInSpace = minutesForCalculate / secondsInMinute
     val minutesInSpace = minutesForCalculate % secondsInMinute
 
-    print(checkZeroBefore(hoursInSpace) + ":" + checkZeroBefore(minutesInSpace) + ":" + checkZeroBefore(secondsInSpace))
-
+    print(String.format("%02d:%02d:%02d", hoursInSpace, minutesInSpace, secondsInSpace))
 }
 
-fun checkZeroBefore(time: Int): String {
-    if (time < 10) {
-        return "0$time"
-    } else {
-        return time.toString()
-    }
-}
+
 
