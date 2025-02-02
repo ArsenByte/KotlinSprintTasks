@@ -1,6 +1,6 @@
 package org.example.lesson2
 
-const val constForTime: Int = 60
+const val MINUTES_IN_HOUR = 60
 
 fun main(){
 
@@ -8,11 +8,11 @@ fun main(){
     val minutesStart = 39
     val minutesOnRoad = 457
 
-    var hoursEnd = hoursStart + minutesOnRoad / constForTime
-    var minutesEnd = minutesStart + minutesOnRoad % constForTime
+    var hoursEnd = hoursStart + minutesOnRoad / MINUTES_IN_HOUR
+    var minutesEnd = minutesStart + minutesOnRoad % MINUTES_IN_HOUR
 
-    hoursEnd += minutesEnd / constForTime
-    minutesEnd %= constForTime
+    hoursEnd += minutesEnd / MINUTES_IN_HOUR
+    minutesEnd %= MINUTES_IN_HOUR
 
     print(hoursEnd)
     print(":")
