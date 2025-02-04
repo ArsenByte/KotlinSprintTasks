@@ -4,12 +4,11 @@ fun main(){
 
     val exampleMove = "D2-D4;0"
 
-    val parsingMovesNumbers = exampleMove.split(";")
-    val allMoves = parsingMovesNumbers[0].split("-")
+    val parsingMovesNumbers = exampleMove.split(";", "-")
 
-    val countOfMoves = parsingMovesNumbers[1]
-    val startMove = allMoves[0]
-    val endMove = allMoves[1]
+    val startMove = parsingMovesNumbers[0]
+    val endMove = parsingMovesNumbers[1]
+    val countOfMoves = parsingMovesNumbers[2]
 
     println(startMove)
     println(endMove)
